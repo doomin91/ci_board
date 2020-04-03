@@ -17,7 +17,6 @@
                     $("#search_btn").click();
             }
        </script>
-
 <article id="board_area">
     <header>
         <h1></h1>
@@ -26,7 +25,7 @@
 
     <div>
         <form id="bd_search" method="post">
-            <input type="text" name="search_word" id="q">
+            <input type="text" name="search_word" id="q" onkeypress="board_search_enter(document.q);" />
             <input type="button" class="btn btn-secondary" id="search_btn" value="검색"/>
         </form>
     </div>
