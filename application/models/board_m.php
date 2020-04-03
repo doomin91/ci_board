@@ -20,4 +20,13 @@ class Board_m extends CI_Model {
         return $result;
     }
  
+    function get_search_list($table = 'ci_board') {
+        $sword = '';
+        $sql = "SELECT * FROM ci_board WHERE subject LIKE '%$sword%'";
+        $query = $this -> db -> query($sql);
+        $result = $query -> result();
+
+        return $result;
+    }
+
 }

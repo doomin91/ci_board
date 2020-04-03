@@ -1,9 +1,36 @@
+<script>
+            $(document).ready(function() {
+                $("#search_btn").click(function() {
+                    if ($("#q").val() == '') {
+                        alert("검색어를 입력하세요!");
+                        return false;
+                    } else {
+                        var act = "/bbs/board/lists/ci_board/q/" + $("#q").val() + "/page/1";
+                        $("#bd_search").attr('action', act).submit();
+                    }
+                });
+            });
+ 
+            function board_search_enter(form) {
+                var keycode = window.event.keyCode;
+                if (keycode == 13)
+                    $("#search_btn").click();
+            }
+       </script>
+
 <article id="board_area">
     <header>
         <h1></h1>
     </header>
     <h1></h1>
-    <table cellpadding="0" cellspacing="0">
+
+    <div>
+        <form id="bd_search" method="post">
+            <input type="text" name="search_word" id="q">
+            <input type="button" class="btn btn-secondary" id="search_btn" value="검색"/>
+        </form>
+    </div>
+    <table cellpadding="0" cellspacing="0" class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">번호</th>

@@ -4,18 +4,18 @@
         <meta charset="UTF-8"/>
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <title>CodeIgniter</title>
+        <title>CI 게시판</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link type="text/css" rel='stylesheet' href="/todo/include/css/bootstrap.css" />
+        <link type="text/css" rel='stylesheet' href="/assets/css/bootstrap.css" />
     </head>
     <body>
         <div id="main">
             <header id="header" data-role="header" data-position="fixed">
                 <blockquote>
                     <p>
-                        만들면서 배우는 CodeIgniter
+                        게시판 예제
                     </p>
-                    <small>실행 예제</small>
+                    <small>- 글보기/등록/검색/조회수 검색이 가능한 게시판</small>
                 </blockquote>
             </header>
             <nav id="gnb">
